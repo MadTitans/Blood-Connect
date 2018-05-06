@@ -128,4 +128,4 @@ But, if for some reason, you don't want to or can't install Visual Studio, you w
 ### Team Name : MadTitans
 - #### [Ankit Passi](https://bitbucket.org/ankitpassi141/) (UI/UX Designer & Developer)
 - #### [Dhruv Kanojia](https://bitbucket.org/Xonshiz/) (Lead Developer)
-- #### [Shivangi Mittal](https://bitbucket.org/Shivangi48/) (Website Designer/ Develope
+- #### [Shivangi Mittal](https://bitbucket.org/Shivangi48/) (Developer)
