@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#DCDCDA"
+             x:Class="BloodConnect.donor_LoginSignup">
+
+    <StackLayout x:Name="user_LoginLayout">
+        <Grid x:Name="grid_UserLoginLayout" 
+          Padding="16"
+          IsVisible="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView BackgroundColor="#00000000"/>
+
+            <Frame BackgroundColor="#ffffff"
+               Grid.ColumnSpan="8"
+               Grid.RowSpan="8"
+               CornerRadius="2"
+               Grid.Row="1"
+               HasShadow="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="user_Login"
+                    Grid.Row="7"
+                    Grid.Column="7"
+                    Grid.ColumnSpan="3"
+                    Grid.RowSpan="2"
+                    Text="LOGIN"
+                    TextColor="#ffffff"
+                    BorderRadius="2"
+                    Clicked="user_LoginClicked"
+                    BackgroundColor="#d32f2f"/>
+
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.ColumnSpan="8"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2">
+                        <Image x:Name="ic_userloginEmail"/>
+                        <Entry x:Name="user_loginEmailID"
+                               Placeholder="Email ID"
+                               Keyboard="Email"
+                               PlaceholderColor="#9e9c9c"
+                               TextColor="#24454c"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.ColumnSpan="8"
+                                 Grid.Row="3"
+                                 Grid.RowSpan="2">
+                        <Image x:Name="ic_userloginPassword"/>
+                        <Entry x:Name="user_loginPassword"
+                               Placeholder="Password"
+                               PlaceholderColor="#9e9c9c"
+                               TextColor="#24454c"
+                               IsPassword="True"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+            <Button x:Name="button"
+                Grid.Row="15"
+                Grid.ColumnSpan="8"
+                Grid.RowSpan="2"
+                BackgroundColor="#b5b5b5"
+                BorderRadius="2"
+                TextColor="#000000"
+                FontAttributes="Bold"
+                FontSize="16"
+                Clicked="user_LogintoSignup"
+                Text="New Account? SIGNUP"/>
+        </Grid>
+
+        <Grid x:Name="grid_UserSignupLayout"
+          Padding="16"
+          IsVisible="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView BackgroundColor="#00000000"/>
+
+            <Frame BackgroundColor="#ffffff"
+               Grid.ColumnSpan="8"
+               Grid.RowSpan="10"
+               CornerRadius="2"
+               Padding="16"
+               Grid.Row="1"
+               HasShadow="True">
+                <ScrollView VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="StartAndExpand"
+                                 HorizontalOptions="StartAndExpand">
+                        
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="StartAndExpand">
+                            <Image x:Name="ic_userSignupPassword"/>
+                            <Entry x:Name="user_SignupPassword"
+                               TextColor="#24454c"
+                               IsPassword="True"
+                               Placeholder="Password"
+                               PlaceholderColor="#9e9c9c"
+                                   HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+
+            <Button x:Name="button_userSignup"
+                Grid.Row="15"
+                Grid.ColumnSpan="8"
+                Grid.RowSpan="2"
+                BackgroundColor="#b5b5b5"
+                BorderRadius="2"
+                TextColor="#000000"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Existing Account? LOGIN"
+                Clicked="user_LogintoSignup"/>
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodConnect.user_Card"
+             BackgroundColor="#DCDCDA">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="Fill">
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         Padding="16">
+                <Frame Padding="16"
+                       HorizontalOptions="FillAndExpand"
+                       HasShadow="True"
+                       Margin="0,0,0,8">
+                    <StackLayout Margin="0,0,0,0">
+                        <Label Text="Your Donor Card"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Start"
+                               FontSize="Medium"
+                               Margin="0,0,0,16"/>
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand">
+                            <StackLayout Orientation="Vertical"
+                                         HorizontalOptions="StartAndExpand">
+                                <Label Text="Default User"
+                                       x:Name="user_CardName"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Start"
+                                   HorizontalOptions="FillAndExpand"
+                               FontSize="Large"
+                               Margin="0,0,0,4"/>
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="CenterAndExpand">
+                                    <Label Text="Blood Group:"
+                                       TextColor="#3F3F3F"
+                                       Margin="0,0,4,0"
+                                       FontSize="Medium"
+                                           FontAttributes="None"
+                                       VerticalOptions="CenterAndExpand"/>
+                                    <Label x:Name="user_CardBloodGroup"
+                                       FontSize="Large"
+                                       HorizontalOptions="StartAndExpand"
+                                       HorizontalTextAlignment="Start"
+                                       TextColor="#24454c"
+                                       FontAttributes="Bold"
+                                           Text="B+ "
+                                       VerticalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Unique Identification Number"
+                                           TextColor="#3F3F3F"
+                                           Margin="0,0,10,0"
+                                           FontSize="Medium"
+                                           FontAttributes="None"
+                                       VerticalOptions="StartAndExpand"/>
+                                    <Label x:Name="user_CardUID"
+                                       FontSize="Medium"
+                                       HorizontalOptions="StartAndExpand"
+                                       HorizontalTextAlignment="Start"
+                                       TextColor="#24454c"
+                                       FontAttributes="Bold"
+                                           Text="8888-8888-8888"
+                                       VerticalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <Image HorizontalOptions="End"
+                                   x:Name="user_CardQRCode"
+                                   VerticalOptions="StartAndExpand"
+                                   Aspect="AspectFill"
+                                   Margin="4,0,0,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Padding="16"
+                       HorizontalOptions="FillAndExpand"
+                       HasShadow="True"
+                       Margin="0,0,0,8">
+                    <StackLayout Margin="0,0,0,0">
+                        <Label Text="Other Information"
+                               TextColor="#24454c"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Start"
+                               FontSize="Medium"
+                               Margin="0,0,0,16"/>
+                        <StackLayout Orientation="Vertical"
+                                     VerticalOptions="FillAndExpand">
+                            
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="0,0,0,8">
+                                <Image x:Name="ic_profileEmailID"
+                                       Margin="0,0,4,0"
+                                       Source="http://40.71.17.14/images/ic_email.png"
+                                       VerticalOptions="Start"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Registered Email ID"
+                                       TextColor="#3F3F3F"
+                                       Margin="0,0,10,0"
+                                       FontSize="Medium"
+                                           FontAttributes="Bold"
+                                       VerticalOptions="StartAndExpand"/>
+                                    <Label x:Name="user_CardEmailID"
+                                       FontSize="Medium"
+                                       HorizontalOptions="StartAndExpand"
+                                       HorizontalTextAlignment="Start"
+                                       TextColor="#24454c"
+                                       FontAttributes="None"
+                                           Text="passi.ankit141@gmail.com"
+                                       VerticalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="0,0,0,8">
+                                <Image x:Name="ic_profilePhoneNumber"
+                                       Margin="0,0,4,0"
+                                       Source="http://40.71.17.14/images/ic_phone.png"
+                                       VerticalOptions="Start"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Registered Phone Number"
+                                       TextColor="#3F3F3F"
+                                       Margin="0,0,10,0"
+                                       FontSize="Medium"
+                                           FontAttributes="Bold"
+                                       VerticalOptions="StartAndExpand"/>
+                                    <Label x:Name="user_CardPhoneNumber"
+                                       FontSize="Medium"
+                                       HorizontalOptions="StartAndExpand"
+                                       HorizontalTextAlignment="Start"
+                                       TextColor="#24454c"
+                                       FontAttributes="None"
+                                           Text="7503955048"
+                                       VerticalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="0,0,0,8">
+                                <Image x:Name="ic_profileAddress"
+                                       Margin="0,0,4,0"
+                                       Source="http://40.71.17.14/images/ic_address.png"
+                                       VerticalOptions="Start"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Registered Address"
+                                       TextColor="#3F3F3F"
+                                       Margin="0,0,10,0"
+                                       FontSize="Medium"
+                                           FontAttributes="Bold"
+                                       VerticalOptions="StartAndExpand"/>
+                                    <Label x:Name="user_CardAddress"
+                                       FontSize="Medium"
+                                       HorizontalOptions="StartAndExpand"
+                                       HorizontalTextAlignment="Start"
+                                       TextColor="#24454c"
+                                       FontAttributes="None"
+                                           Text="Default Address"
+                                       VerticalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

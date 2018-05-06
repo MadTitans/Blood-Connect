@@ -1,0 +1,1 @@
+D:\Competitions\AngelHack - BloodConnect (2018)\android_app\BloodConnect\BloodConnect.UWP\BloodConnect.UWP.csproj;x86

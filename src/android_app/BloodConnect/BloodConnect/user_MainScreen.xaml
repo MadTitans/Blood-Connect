@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BloodConnect"
+             x:Class="BloodConnect.user_MainScreen"
+            NavigationPage.HasBackButton="False"
+            Title="User Dashboard">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="aboutUs" 
+                     Order="Secondary"
+                     Text="About Us" 
+                     Priority="1"/>
+        <ToolbarItem Name="aboutApp" 
+                     Order="Secondary"
+                     Text="About Application" 
+                     Priority="0" />
+    </TabbedPage.ToolbarItems>
+    
+    <!--Pages can be added as references or inline-->
+    <NavigationPage Title="SEARCH" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:user_Search NavigationPage.HasNavigationBar="False"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="DONOR CARD" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:user_Card NavigationPage.HasNavigationBar="False"/>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

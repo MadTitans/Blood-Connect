@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#DCDCDA"
+             x:Class="BloodConnect.user_SearchFilter"
+             NavigationPage.HasNavigationBar="True"
+             NavigationPage.BackButtonTitle="Search Filter"
+             NavigationPage.HasBackButton="True"
+             Title="Search Filter">
+
+    <StackLayout x:Name="user_LoginLayout">
+        <Grid x:Name="grid_UserLoginLayout" 
+          Padding="16"
+          IsVisible="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView BackgroundColor="#00000000"/>
+
+            <Frame BackgroundColor="#ffffff"
+               Grid.ColumnSpan="8"
+               Grid.RowSpan="8"
+               CornerRadius="2"
+               Grid.Row="1"
+               HasShadow="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                        <Picker x:Name="search_State" 
+                                IsVisible="False"
+                                SelectedIndexChanged="search_State_SelectedIndexChanged"
+                                WidthRequest="200"
+                                VerticalOptions="StartAndExpand" 
+                                HorizontalOptions="StartAndExpand" 
+                                Margin="20,0,20,0"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                        </Picker>
+                    <Picker x:Name="search_BloodGroup" 
+                                IsVisible="False"
+                                SelectedIndexChanged="search_BloodGroup_SelectedIndexChanged"
+                                WidthRequest="200"
+                                VerticalOptions="StartAndExpand" 
+                                HorizontalOptions="StartAndExpand" 
+                                Margin="20,0,20,0"
+                                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}">
+                        <Picker.Items>
+                            <x:String>A+</x:String>
+                            <x:String>A-</x:String>
+                            <x:String>B+</x:String>
+                            <x:String>B-</x:String>
+                            <x:String>AB+</x:String>
+                            <x:String>AB-</x:String>
+                            <x:String>O+</x:String>
+                            <x:String>O-</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.ColumnSpan="8"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 Margin="0,0,0,4">
+                        <Image x:Name="ic_searchState"
+                               Source="http://40.71.17.14/images/ic_password.png"/>
+                        <Label Text="Select State"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Start"
+                           VerticalOptions="CenterAndExpand"
+                           x:Name="SelectStatePicker_Label"
+                           TextColor="#24454c"
+                               FontSize="Large"
+                               FontAttributes="Bold"/>
+                        <Image x:Name="Insight_Picker_1_Image"
+                               Source="http://40.71.17.14/images/ic_arrow_drop_down.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="searchStatePicker_Activated"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.ColumnSpan="8"
+                                 Grid.Row="2"
+                                 Grid.RowSpan="2"
+                                 Margin="0,0,0,4">
+                        <Image x:Name="ic_searchBlood"
+                               Source="http://40.71.17.14/images/ic_password.png"/>
+                        <Label Text="Select Blood Group"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Start"
+                           VerticalOptions="CenterAndExpand"
+                           x:Name="SelectBloodGroup_Label"
+                           TextColor="#24454c"
+                               FontSize="Large"
+                               FontAttributes="Bold"/>
+                        <Image x:Name="Insight_Picker_1_Image1"
+                               Source="http://40.71.17.14/images/ic_arrow_drop_down.png"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="searchBloodGroupPicker_Activated"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.ColumnSpan="8"
+                                 Grid.Row="4"
+                                 Grid.RowSpan="2"
+                                 Margin="0,0,0,4">
+                        <Image x:Name="ic_searchBlood1"
+                               Source="http://40.71.17.14/images/ic_password.png"/>
+                        <Label Text="Units Required:"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Start"
+                           VerticalOptions="CenterAndExpand"
+                           TextColor="#24454c"
+                               FontSize="Large"
+                               FontAttributes="Bold"/>
+                        <Entry x:Name="search_RequiredUnits"
+                               Placeholder="Units"
+                               PlaceholderColor="#b5b5b5"
+                               HorizontalTextAlignment="End"
+                               HorizontalOptions="Fill"
+                               Keyboard="Numeric"
+                               TextColor="#9a0007"/>
+                    </StackLayout>
+
+                </Grid>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal"
+                         Grid.Row="15"
+                         Grid.ColumnSpan="8"
+                         Grid.RowSpan="2">
+
+                <Button x:Name="search_Back"
+                BackgroundColor="#b5b5b5"
+                BorderRadius="2"
+                TextColor="#ffffff"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Back"
+                        Margin="0,0,4,0"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="search_SearchBackClicked"/>
+                
+                <Button x:Name="search_SearchComplete"
+                BackgroundColor="#d32f2f"
+                BorderRadius="2"
+                TextColor="#ffffff"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Search"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="search_SearchCompleteClicked"/>
+            </StackLayout>
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

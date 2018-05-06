@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodConnect.user_Search"
+             xmlns:local="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+             BackgroundColor="#fcfcfc"
+             xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+>
+    <RelativeLayout>
+        <StackLayout x:Name="user_SearchEmptyScreen" 
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,    
+            Property=Height}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,    
+            Property=Width}"
+                     IsVisible="True">
+            <Label Text="Click on Search button"
+                   TextColor="#b5b5b5"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="None"
+                   FontSize="Large"/>
+        </StackLayout>
+        <StackLayout RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,    
+            Property=Height}"
+                     Padding="0,5,0,0"
+                     IsVisible="False"
+                     x:Name="user_SearchList">
+
+            <ListView x:Name="usersPastEntries_ListView"
+                      IsPullToRefreshEnabled="False" 
+                      ItemSelected="usersAllEntries_ItemSelected"
+                      HasUnevenRows="True"
+                      BackgroundColor="#FCFCFC"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" 
+                                         Padding="16,4,16,4"
+                                         VerticalOptions="CenterAndExpand">
+                                <circleImage:CircleImage Source="http://40.71.17.14/images/ic_launcher.png" 
+                                       Aspect="AspectFit"
+                                       WidthRequest="50" 
+                                       HeightRequest="50"
+                                       Margin="4"/>
+                                <StackLayout HorizontalOptions="StartAndExpand" 
+                                             Padding="16,8,16,8">
+                                    <Label Text="{Binding b_name}" 
+                                           TextColor="#24454c"
+                                           FontAttributes="Bold"
+                                           FontSize="Medium"
+                                           VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding b_state}" 
+                                           TextColor="#24454c"
+                                           FontAttributes="None"
+                                           FontSize="Small"
+                                           Font="14"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" 
+                         VerticalOptions="EndAndExpand" 
+                         HorizontalOptions="EndAndExpand"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height}">
+
+            <local:CircleButton BackgroundColor="#d32f2f"
+                            BorderWidth="20"
+                            BorderThickness="20"
+                            BorderColor="#d32f2f"
+                            HeightRequest="56"
+                            WidthRequest="56"
+                            Margin="0,0,15,15"
+                                Text="+"
+                            FontSize="30"
+                            FontAttributes="None"
+                            TextColor="#ffffff"
+                                Clicked="user_SearchFilter"/>
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>

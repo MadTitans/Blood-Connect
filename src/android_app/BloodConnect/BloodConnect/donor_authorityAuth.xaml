@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:BloodConnect"
+            Title="BloodConnect"
+            BarBackgroundColor="#d32f2f"
+            NavigationPage.HasNavigationBar="True"
+            IsEnabled="True"
+            x:Class="BloodConnect.donor_authorityAuth">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="aboutUs" 
+                     Order="Secondary"
+                     Text="About Us" 
+                     Priority="1"
+                     Clicked="aboutUs_Activated"/>
+        <ToolbarItem Name="aboutApp" 
+                     Order="Secondary"
+                     Text="About Application" 
+                     Priority="0" />
+    </TabbedPage.ToolbarItems>
+    <local:donor_LoginSignup Title="#BLOODREQUEST"/>
+    <local:authority_LoginSignup Title="#AUTHORITIES"/>
+</TabbedPage>
